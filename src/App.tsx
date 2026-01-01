@@ -1,5 +1,6 @@
 import './App.css'
 import ProductCard from './Components/ProductCard/ProductCard'
+import TopNav from './Components/TopNav/TopNav'
 
 function App() {
 
