@@ -1,0 +1,37 @@
+.product-display {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+  gap: 24px; /* spacing between cards */
+  padding: 16px;
+  width: 100%;
+  max-height: 80vh; /* adjust height as needed */
+  overflow-y: auto; /* vertical scrolling */
+  scroll-behavior: smooth;
+
+  /* Optional: custom vertical scrollbar */
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  /* Responsive: fewer cards per row on smaller screens */
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+}
