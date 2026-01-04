@@ -51,7 +51,6 @@ function App() {
     <>
       <TopNav />
       <ProductDisplay ProductsList={productList} />
-      {/* <ProductCard {...Product1} /> */}
     </>
   )
 }

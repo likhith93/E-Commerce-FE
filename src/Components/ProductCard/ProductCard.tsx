@@ -18,23 +18,23 @@ export interface ProductCardProps {
 }
 export default function ProductCard(ProductDetails: ProductCardProps) 
 {
-    return(
-            <Card className="product-card" component={Button}>
-                <CardMedia
-                    component="img"
-                    height="140"
-                    image={ProductDetails.image}
-                    alt={ProductDetails.name}
-                />
-                <CardContent>
-                    <Typography variant="h6" component="div">
-                        {ProductDetails.name}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                        ₹{Number(ProductDetails.price).toLocaleString()}
-                    </Typography>
-                </CardContent>
-            </Card>
-    )
+    return (
+      <Card className="product-card" component={Button}>
+        <CardMedia
+          component="img"
+          height="180"
+          image={ProductDetails.image || "/placeholder.png"}
+          alt={ProductDetails.name}
+        />
+        <CardContent>
+          <Typography variant="h6" component="div">
+            {ProductDetails.name}
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            ₹{Number(ProductDetails.price).toLocaleString()}
+          </Typography>
+        </CardContent>
+      </Card>
+    );
 
 }
